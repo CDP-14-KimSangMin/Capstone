@@ -8,27 +8,40 @@ public class Edge {
 	/**
 	 * Constructor
 	 */
-	public Edge(int distance, Node from, Node to ){
-		this.distance = distance;
+	public Edge(String id, Node from, Node to, int distance){
+		this.id = id;
 		this.from = from;
 		this.to = to;
+		this.distance = distance;
+		
 	}
 	
 	//getter & setter
-	//NearRoadData will be initialized by constructor. setter is not necessary
+	public String getId(){
+		return id;
+	}
+	
 	public int getDistance(){
-		return this.distance;
+		return distance;
 	}
 	
 	public Node getFrom(){
-		return this.from;
+		return from;
 	}
 	
 	public Node getTo(){
-		return this.to;
+		return to;
+	}
+	
+	//method
+	@Override
+	public String toString(){
+		return from + " " + to;
 	}
 	
 	//variables
+	private String id;
 	private int distance;
-	private Node from, to;	
+	private Node from;
+	private Node to;	
 }
