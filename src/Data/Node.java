@@ -6,13 +6,6 @@ public class Node {
 	
 
 	//constructor
-
-	public Node(String id, String name, int x, int y){
-		this.name = name;
-		this.id = id;
-		this.x = x;
-		this.y = y;
-	}
 	
 	public Node(String id, String name){
 		this.name = name;
@@ -29,13 +22,6 @@ public class Node {
 		return id;
 	}
 	
-	public int getX(){
-		return x;
-	}
-	
-	public int getY(){
-		return y;
-	}
 	//method
 	
 	/**
@@ -77,6 +63,4 @@ public class Node {
 	private Vector<Edge> Road = new Vector<Edge>();
 	private String name;
 	private String id;
-	private int x;
-	private int y;
 }
