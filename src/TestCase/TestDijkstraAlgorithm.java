@@ -3,13 +3,20 @@ package TestCase;
 import java.util.ArrayList;
 import java.util.LinkedList;
 import java.util.List;
+
+import java.util.Scanner;
+
 import org.junit.Test;
 
 import Data.*;
 import Calculate.DijkstraAlgorithm;
-
 import static org.junit.Assert.assertNotNull;
 import static org.junit.Assert.assertTrue;
+
+
+
+
+
 
 public class TestDijkstraAlgorithm {
 
@@ -20,22 +27,22 @@ public class TestDijkstraAlgorithm {
   public void testExcute() {
     nodes = new ArrayList<Node>();
     edges = new ArrayList<Edge>();
-    for (int i = 0; i < 300; i++) {
+    for (int i = 0; i < 1000; i++) {
     	Node location = new Node("Node_" + i, "Node_" + i);
       nodes.add(location);
     }
     int k = 0;
     int length = 50;
-    for (int i = 0; i < 222; i+=7) {
-    	for(int j = i; j < 222; j+=5)
+    for (int i = 0; i < 1000; i+=8) {
+    	for(int j = i; j < 1000; j+=9)
     	{
     			undirected("Edge_"+Integer.toString(k), i, j, length+=j);
     			k++;
     			length-=i;
     	}
     }
-    for (int i = 1; i < 222; i+=2) {
-    	for(int j = i; j < 222; j+=7)
+    for (int i = 20; i < 1000; i+=7) {
+    	for(int j = i; j < 1000; j+=10)
     	{
     			undirected("Edge_"+Integer.toString(k), i, j, length+=j);
     			k++;
@@ -61,8 +68,18 @@ public class TestDijkstraAlgorithm {
     // Lets check from location Loc_1 to Loc_10
     Graph graph = new Graph(nodes, edges);
     DijkstraAlgorithm dijkstra = new DijkstraAlgorithm(graph);
-    dijkstra.execute(nodes.get(0));
-    LinkedList<Node> path = dijkstra.getPath(nodes.get(217));
+    
+    
+    System.out.println("input source node & destination node");
+    int start;
+    int end;
+    Scanner input = new Scanner(System.in);
+    
+    start = input.nextInt();
+    end = input.nextInt();
+    
+    dijkstra.execute(nodes.get(start));
+    LinkedList<Node> path = dijkstra.getPath(nodes.get(end));
     
     assertNotNull(path);
     assertTrue(path.size() > 0);
