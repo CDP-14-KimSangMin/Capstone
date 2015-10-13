@@ -28,7 +28,7 @@ public class TestDijkstraAlgorithm {
     nodes = new ArrayList<Node>();
     edges = new ArrayList<Edge>();
     for (int i = 0; i < 1000; i++) {
-    	Node location = new Node("Node_" + i, "Node_" + i);
+    	Node location = new Node("Node" + i, "Node" + i);
       nodes.add(location);
     }
     int k = 0;
@@ -36,7 +36,7 @@ public class TestDijkstraAlgorithm {
     for (int i = 0; i < 1000; i+=8) {
     	for(int j = i; j < 1000; j+=9)
     	{
-    			undirected("Edge_"+Integer.toString(k), i, j, length+=j);
+    			undirected("Edge"+Integer.toString(k), i, j, length+=j);
     			k++;
     			length-=i;
     	}
@@ -44,7 +44,7 @@ public class TestDijkstraAlgorithm {
     for (int i = 20; i < 1000; i+=7) {
     	for(int j = i; j < 1000; j+=10)
     	{
-    			undirected("Edge_"+Integer.toString(k), i, j, length+=j);
+    			undirected("Edge"+Integer.toString(k), i, j, length+=j);
     			k++;
     			length-=i;
     	}
@@ -85,7 +85,7 @@ public class TestDijkstraAlgorithm {
     assertTrue(path.size() > 0);
     
     for (Node vertex : path) {
-      System.out.println(vertex);
+      System.out.print("->" + vertex);
     }
     
   }
