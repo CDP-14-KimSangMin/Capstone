@@ -88,6 +88,8 @@ public class TestDijkstraAlgorithm {
       System.out.print("->" + vertex);
     }
     
+    input.close();
+    
   }
 
   
