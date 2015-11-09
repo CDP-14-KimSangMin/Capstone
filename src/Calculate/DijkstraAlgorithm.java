@@ -123,5 +123,12 @@ public class DijkstraAlgorithm {
 		return path;
 	}
 
+	
+	public Integer getdistance(Node destination)
+	{
+		
+		return  distance.get(destination);
+	}
 }
+
 
