@@ -33,56 +33,7 @@ public class knuapp {
 	    addEdge("Edge_10",nodes,edges,2,14,25);
 	    addEdge("Edge_11",nodes,edges,14,15,74);
 	    addEdge("Edge_12",nodes,edges,15,16,44);
-	    addEdge("Edge_13",nodes,edges,12,16,52);addEdge("Edge_",nodes,edges,1,2,175);
-	    addEdge("Edge_",nodes,edges,2,3,129);
-	    addEdge("Edge_",nodes,edges,3,4,57);
-	    addEdge("Edge_",nodes,edges,4,5,189);
-	    addEdge("Edge_",nodes,edges,5,1012,80);
-	    addEdge("Edge_",nodes,edges,6,1012,121);
-	    addEdge("Edge_",nodes,edges,6,8,129);
-	    addEdge("Edge_",nodes,edges,8,9,87);
-	    addEdge("Edge_",nodes,edges,0,1,142);
-	    addEdge("Edge_",nodes,edges,2,14,25);
-	    addEdge("Edge_",nodes,edges,14,15,74);
-	    addEdge("Edge_",nodes,edges,15,16,44);
-	    addEdge("Edge_",nodes,edges,12,16,52);
-	    addEdge("Edge_",nodes,edges,9,10,44);
-	    addEdge("Edge_",nodes,edges,10,11,25);
-	    addEdge("Edge_",nodes,edges,11,12,51);
-	    addEdge("Edge_",nodes,edges,0,12,154);
-	    addEdge("Edge_",nodes,edges,16,18,55);
-	    addEdge("Edge_",nodes,edges,18,20,54);
-	    addEdge("Edge_",nodes,edges,10,20,51);
-	    addEdge("Edge_",nodes,edges,19,20,41);
-	    addEdge("Edge_",nodes,edges,17,19,26);
-	    addEdge("Edge_",nodes,edges,17,1003,61);
-	    addEdge("Edge_",nodes,edges,1003,1006,35);
-	    addEdge("Edge_",nodes,edges,14,1003,30);
-	    addEdge("Edge_",nodes,edges,15,17,81);
-	    addEdge("Edge_",nodes,edges,1006,1009,51);
-	    addEdge("Edge_",nodes,edges,4,1009,45);
-	    addEdge("Edge_",nodes,edges,23,1009,42);
-	    addEdge("Edge_",nodes,edges,19,21,36);
-	    addEdge("Edge_",nodes,edges,21,23,46);
-	    addEdge("Edge_",nodes,edges,23,25,56);
-	    addEdge("Edge_",nodes,edges,24,1010,53);
-	    addEdge("Edge_",nodes,edges,8,1010,60);
-	    addEdge("Edge_",nodes,edges,23,24,22);
-	    addEdge("Edge_",nodes,edges,17,1004,20);
-	    addEdge("Edge_",nodes,edges,18,1004,20);
-	    addEdge("Edge_",nodes,edges,21,1007,20);
-	    addEdge("Edge_",nodes,edges,22,1007,20);
-	    addEdge("Edge_",nodes,edges,18,1005,25);
-	    addEdge("Edge_",nodes,edges,11,1005,25);
-	    addEdge("Edge_",nodes,edges,22,1008,25);
-	    addEdge("Edge_",nodes,edges,9,1008,25);
-	    addEdge("Edge_",nodes,edges,25,1010,22);
-	    addEdge("Edge_",nodes,edges,17,1006,56);
-	    addEdge("Edge_",nodes,edges,22,24,82);
-	    addEdge("Edge_",nodes,edges,20,22,30);
-	    addEdge("Edge_",nodes,edges,13,15,52);
-	    addEdge("Edge_",nodes,edges,13,1002,17);
-	    addEdge("Edge_",nodes,edges,13,1001,17);
+	    addEdge("Edge_13",nodes,edges,12,16,52);
 	    addEdge("Edge_14",nodes,edges,9,10,44);
 	    addEdge("Edge_15",nodes,edges,10,11,25);
 	    addEdge("Edge_16",nodes,edges,11,12,51);
@@ -127,10 +78,11 @@ public class knuapp {
 	    dijkstraAlgorithm.execute(nodes.get(1002));
 	    LinkedList<Node> path = dijkstraAlgorithm.getPath(nodes.get(1006));
 	    for (Node vertex : path) {
-	        
-	    	System.out.print(vertex + ">");
+	    	
+	    	System.out.print(vertex + "->");
 	        
 	    }
+
 	    int temp = dijkstraAlgorithm.getdistance(nodes.get(1006));
 	    System.out.print(temp);
 		return;

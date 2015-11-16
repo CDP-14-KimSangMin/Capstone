@@ -125,9 +125,32 @@ public class DijkstraAlgorithm {
 
 	
 	public Integer getdistance(Node destination)
-	{
-		
+	{	
 		return  distance.get(destination);
+	}
+	
+	public String getTime(int distance){
+		String temp;
+		double time;
+		int hour;
+		int minute;
+		int second;
+		
+		time = distance/1.1;
+		second = (int)time;
+		hour = second / 3600;
+		minute = (second - 3600*hour)/60;
+		second = second % 60;
+		
+		temp = "예상 소요 시간은 ";
+		if(hour!=0){
+			temp = temp + hour + "시간 ";
+		}
+		if(minute!=0){
+			temp = temp + minute + "분 ";
+		}
+		temp = temp + second + "초입니다";
+		return temp;
 	}
 }
 
